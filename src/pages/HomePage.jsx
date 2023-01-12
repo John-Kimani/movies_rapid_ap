@@ -1,7 +1,11 @@
+import MovieList from "../components/MovieList/MovieList";
+
 const HomePage = () => {
-    return ( <div className="main">
-        <h3>HomePage Works</h3>
-    </div> );
-}
- 
+  return (
+    <div className="main">
+      <MovieList />
+    </div>
+  );
+};
+
 export default HomePage;
