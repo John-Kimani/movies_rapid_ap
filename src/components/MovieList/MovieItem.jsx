@@ -32,8 +32,8 @@ const MovieItem = (props) => {
         <>
           <Card>
             <Card.Body className="text-center">
-              <h3>Please wait...</h3>
-              <p>Just a moment we are getting your movies.</p>
+              <h3>Oops...Too many requests Error.</h3>
+              <p>Seems we have reach our server limit.</p>
             </Card.Body>
           </Card>
         </>
