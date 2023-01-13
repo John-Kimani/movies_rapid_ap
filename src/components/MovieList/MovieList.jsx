@@ -8,12 +8,19 @@ const MovieList = () => {
 
   const options = {
     method: "GET",
-    url: "https://watchmode.p.rapidapi.com/autocomplete-search/",
-    params: { search_value: "Breaking Bad", search_type: "1" },
-    headers: {
-      "x-RapidAPI-key": "250996e75dmsh7e561e75d237598p1d9adejsnf4a4d2f93a40",
-      "X-RapidAPI-Host": "watchmode.p.rapidapi.com",
+    url: 'https://anime-db.p.rapidapi.com/anime',
+    params: {
+      page: '1',
+      size: '10',
+      search: 'Fullmetal',
+      genres: 'Fantasy,Drama',
+      sortBy: 'ranking',
+      sortOrder: 'asc'
     },
+    headers: {
+      'X-RapidAPI-Key': '250996e75dmsh7e561e75d237598p1d9adejsnf4a4d2f93a40',
+      'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
+    }
   };
 
   useEffect(() => {
@@ -24,7 +31,7 @@ const MovieList = () => {
     try {
       axios.request(options).then(function (response) {
         // console.log('Data',response.data)
-        const allMovies = response.data.results;
+        const allMovies = response.data.data;
         // console.log(allMovies)
         if (response.status === 200) {
           setMovies(allMovies);

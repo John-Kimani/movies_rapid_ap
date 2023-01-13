@@ -13,12 +13,12 @@ const MovieItem = (props) => {
       return movies.map((movie, index) => {
         // console.log("Last", movie);
         return (
-          <div key={movie.id} className="col-sm-3 col-md-2 mt-2">
+          <div key={movie._id} className="col-sm-3 col-md-2 mt-2">
             <Card
               className="movie_card"
               shadow={0}
               style={{
-                background: `url(${movie.image_url})`,
+                background: `url(${movie.image})`,
                 height: "280px",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
